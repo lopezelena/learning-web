@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f7f7;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    color: #246b9d;
+}
+
+.boleto {
+    width: 100%;
+    max-width: 1257px;
+    min-width: 900px;
+    height: 825px;
+    margin: 0 auto;
+    padding: 18px 20px 10px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* CABECERA */
+.cabecera {
+    height: 19%;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.loterias, .quiniela-logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.quiniela-logo {
+    width: 19%;
+}
+
+.imagen-logo {
+    display: block;
+    max-width: 100%;
+    max-height: 115px;
+    object-fit: contain;
+}
+
+.centro {
+    flex: 1;
+    min-width: 0;
+}
+
+.titulo {
+    background: #579ac7;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+}
+
+.titulo span {
+    margin-left: 7%;
+}
+
+.instrucciones {
+    color: #111;
+    font-size: 13px;
+    margin: 6px 0 8px;
+    line-height: 1.25;
+}
+
+.jornada {
+    border: 2px solid #5594c4;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+    gap: 8px;
+}
+
+.jornada span {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+/* TABLA DE PARTIDOS Y PRONÓSTICOS */
+.zona {
+    height: 68%;
+    display: flex;
+    align-items: stretch;
+    gap: 3%;
+    margin-top: 1%;
+    width: 100%;
+}
+
+.partidos {
+    width: 84%;
+    flex: 0 0 84%;
+    position: relative;
+}
+
+.encabezado-pronosticos {
+    height: 6%;
+    margin-left: 30%;
+    border: 2px solid #e85b66;
+    color: #d95660;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 8px;
+    padding-top: 3px;
+}
+
+#filas {
+    height: 94%;
+}
+
+.fila {
+    display: flex;
+    height: 7.142%;
+    border-bottom: none;
+}
+
+/* Filas línea de separación */
+.fila.partido-1,
+.fila.partido-5,
+.fila.partido-9,
+.fila.partido-12 {
+    border-top: 0;
+    position: relative;
+}
+
+/* Líneas rojas gruesas entre columnas pronósticos */
+.fila.partido-1::after,
+.fila.partido-5::after,
+.fila.partido-9::after,
+.fila.partido-12::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 0;
+    top: -5px;
+    height: 10px;
+    background: #e45b65;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Lineas finas de separación roja */
+.fila.partido-1::before,
+.fila.partido-5::before,
+.fila.partido-9::before,
+.fila.partido-12::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 70%;
+    top: 0;
+    height: 3px;
+    background: #e45b65;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.fila.partido-14 {
+    border-bottom: 0;
+    position: relative;
+}
+
+.fila.partido-14::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 70%;
+    bottom: 0;
+    height: 2px;
+    background: #e45b65;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.fila.partido-14::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: #e45b65;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.nombre {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 18px;
+    padding-left: 4px;
+}
+
+.puntos {
+    padding-left: 4px;
+    letter-spacing: 2px;
+    color: #246b9d;
+}
+
+.numero {
+    margin-left: auto;
+    padding: 0 5px;
+    font-weight: normal;
+}
+
+.pronosticos {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    border-left: 3px solid #e45a64;
+    border-right: 3px solid #e45a64;
+}
+
+.grupo {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    border-right: 2px solid #e45a64;
+    background: white;
+}
+
+/* Selecciona las casillas impares dentro de la tabla pronostrico */
+.grupo:nth-child(odd) {
+    background: #e65b65;
+}
+
+.celda {
+    flex: 1;
+    min-width: 0;
+    align-self: center;
+    margin: 2px 1px;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e45b65;
+    background: white;
+    color: #d84e58;
+    font-size: 19px;
+}
+
+/* Todas las casillas son blancas con número rojo */
+.celda.uno {
+    background: white;
+    color: #d84e58;
+}
+
+/* COLUMNA DE COMBINACIONES */
+.combinaciones {
+    position: relative;
+    width: 10%;
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: 2px solid #e45b65;
+    color: #d84e58;
+    text-align: center;
+    background: white;
+}
+
+.comb-titulo {
+    border-bottom: 1px solid #e45b65;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.comb-columnas {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4px 3px 34px;
+    gap: 5px;
+    height: calc(100% - 28px);
+}
+
+#dobles, #triples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    flex: none;
+    min-height: 0;
+}
+
+#dobles {
+    height: 100%;
+    width: 50%;
+}
+
+#triples {
+    height: 62%;
+    width: 50%;
+}
+
+.casilla-comb {
+    border: 1px solid #e45b65;
+    width: 25px;
+    height: 22px;
+    flex: 0 0 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.etiqueta-dobles, .etiqueta-triples {
+    position: absolute;
+    font-size: 11px;
+    line-height: 1.1;
+    margin: 0;
+    width: 50%;
+}
+
+.etiqueta-dobles {
+    left: 0;
+    bottom: 2px;
+}
+
+.etiqueta-triples {
+    right: 0;
+    top: 64%;
+}
+
+/* Se limita al ancho de la tabla principal,
+   no invade la columna de combinaciones. */
+.pie {
+    width: 84%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #246b9d;
+    font-size: 17px;
+}
+
+.bien-mal {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.marca {
+    display: inline-block;
+    border: 1px solid #5794bc;
+    padding: 1px 5px;
+    color: #246b9d;
+}
+
+.pleno, .bloques {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.pleno {
+    color: #e45b65;
+    font-size: 17px;
+    position: relative;
+}
+
+.pleno-titulo {
+    position: absolute;
+    right: 70%;
+    margin-right: 8px;
+    color: #e45b65;
+    white-space: nowrap;
+}
+
+.equipo-pleno {
+    margin-left: 30%;
+    color: #246b9d;
+}
+
+.pleno b, .bloques b {
+    border: 1px solid #e45b65;
+    min-width: 23px;
+    text-align: center;
+    padding: 2px 5px;
+    font-weight: normal;
+}
+
+.las-palmas {
+    color: #246b9d;
+    margin-left: auto;
+}
+
+.bloques b {
+    background: #e45b65;
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.bloques {
+    font-weight: bold;
+    position: relative;
+    padding-left: 30%;
+    gap: 4px;
+}
+
+.etiqueta-bloques {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    padding-right: 4px;
+    box-sizing: border-box;
+    text-align: right;
+    color: #246b9d;
+    white-space: nowrap;
+    
+}
+
+.bloques b {
+    min-width: 0;
+    flex: 1 1 0;
+}
+

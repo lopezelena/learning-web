@@ -128,8 +128,8 @@ body {
     height: 7.142%;
     border-bottom: none;
 }
-
 /* Filas línea de separación */
+
 .fila.partido-1,
 .fila.partido-5,
 .fila.partido-9,
@@ -147,8 +147,8 @@ body {
     position: absolute;
     left: 30%;
     right: 0;
-    top: -5px;
-    height: 10px;
+    top: -6px;
+    height: 12px;
     background: #e45b65;
     z-index: 10;
     pointer-events: none;
@@ -259,6 +259,7 @@ body {
 }
 
 /* Todas las casillas son blancas con número rojo */
+
 .celda.uno {
     background: white;
     color: #d84e58;
@@ -435,5 +436,14 @@ body {
 .bloques b {
     min-width: 0;
     flex: 1 1 0;
+}
+
+@media (max-width: 900px) {
+    .boleto {
+        min-width: 900px;
+    }
+    body {
+        overflow-x: auto;
+    }
 }
 

@@ -238,7 +238,7 @@ body {
     background: white;
 }
 
-/* Selecciona las casillas impares dentro de la tabla pronostrico */
+/* Selecciona las casillas impares dentro de la tabla pronóstico */
 .grupo:nth-child(odd) {
     background: #e65b65;
 }
@@ -414,7 +414,7 @@ body {
 }
 
 .bloques {
-    font-weight: bold;
+    font-weight: normal;
     position: relative;
     padding-left: 30%;
     gap: 4px;

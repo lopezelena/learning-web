@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+/* Mantener el diseño al ampliar o reducir el zoom */
+
+html {
+    overflow-x: auto;
+}
+
+
 body {
     margin: 0;
     background: #f7f7f7;
@@ -10,15 +17,15 @@ body {
 }
 
 .boleto {
-    width: 100%;
-    max-width: 1257px;
-    min-width: 900px;
+    width: 1257px;
+    min-width: 1257px;
+    max-width: none;
     height: 825px;
     margin: 0 auto;
     padding: 18px 20px 10px;
     background: white;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* CABECERA */
@@ -220,6 +227,7 @@ body {
     margin-left: auto;
     padding: 0 5px;
     font-weight: normal;
+    flex-shrink: 0;
 }
 
 .pronosticos {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <script>
+        const value = 0;
+
+        function methodSwitch(val){
+            let toRet;
+            switch(value + 1){
+                case 1:
+                    toRet = value + 1;
+                    break;
+                case 2:
+                    toRet = value + 0;
+                    break;
+                case 3:
+                    toRet = value - 1;
+                    break;
+                default:
+                    toRet = value * 2;
+                    break;
+                }
+            return toRet;
+        }
+    </script>
+</head>
+<body>
+    <nav><a href="../index.html">← Volver atrás</a><div>Pulsar F12 para abrir las herramientas de desarrollo</div></nav>
+    <script>
+        let result = methodSwitch(value);
+        console.log("Value of switch case is -> " + result);
+    </script>
+</body>
+</html>

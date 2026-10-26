@@ -9,18 +9,18 @@
 
         function methodSwitch(val){
             let toRet;
-            switch(value + 1){
+             switch(val + 1){ //esto es para seleccionar el case, luego el val vuelve a ser el de "const"
                 case 1:
-                    toRet = value + 1;
+                    toRet = val + 1;
                     break;
                 case 2:
-                    toRet = value + 0;
+                    toRet = val + 0;
                     break;
                 case 3:
-                    toRet = value - 1;
+                    toRet = val - 1;
                     break;
                 default:
-                    toRet = value * 2;
+                    toRet = val * 2;
                     break;
                 }
             return toRet;

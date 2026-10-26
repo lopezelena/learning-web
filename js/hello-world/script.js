@@ -1,1 +1,1 @@
-log("Mensaje externo")
+console.log("Mensaje desde un fichero externo");

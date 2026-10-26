@@ -1,0 +1,1 @@
+log("Mensaje externo")

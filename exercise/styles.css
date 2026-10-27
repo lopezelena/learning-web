@@ -157,3 +157,41 @@ footer {
     border-radius: 5px;
     width: 180px;
 }
+
+/* Formulario de valoración */
+form {
+    max-width: 520px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #F5E6D3;
+    border: 2px solid #D9B99B;
+    border-radius: 12px;
+}
+
+
+.valoracion-opciones {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+form button {
+    display: block;
+    background-color: #79513C;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    padding: 10px 18px;
+    margin: 10px auto 0;
+    border: 2px solid #79513C;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #A64B35;
+    border-color: #A64B35;
+}

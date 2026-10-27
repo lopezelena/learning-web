@@ -1,5 +1,4 @@
-
-/* Estilo general de la página */
+/* Estilo general de todas las páginas */
 body {
     background-color: #FFF8EF;
     color: #3D3028;
@@ -7,7 +6,7 @@ body {
     margin: 40px;
 }
 
-/* Título principal */
+/* Títulos */
 h1 {
     background-color: #F5E6D3;
     color: #79513C;
@@ -17,42 +16,36 @@ h1 {
     text-align: center;
     width: 80%;
     margin: 20px auto;
-
 }
 
-/* Títulos secundarios */
 h2 {
     color: #A64B35;
     border-top: 2px solid #D9B99B;
     padding-top: 8px;
 }
 
-/* Subtítulos */
 h3 {
     color: #79513C;
 }
 
-
-/* Imágenes de la página */
-img {
-    border: 3px solid #D9B99B;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+/* Enlaces generales */
+a {
+    display: inline-block;
+    color: #A64B35;
+    transition: 0.3s;
 }
 
-/* Imagen principal de la receta */
-.imagen-principal {
-    display: block;
-    width: 500px;
-    margin: 20px auto;
+a:hover {
+    color: #663022;
+    text-decoration: underline;
+    transform: scale(1.05);
 }
 
-/* Enlaces */
+/* Botones de la página principal */
 .boton {
     display: block;
-    background-color:#F5E6D3;
-    color:  #553a2c;
+    background-color: #F5E6D3;
+    color: #553a2c;
     text-decoration: none;
     padding: 10px;
     margin: 5px;
@@ -61,14 +54,95 @@ img {
     border-radius: 5px;
     width: 180px;
     cursor: pointer;
-    transition: 0.3s
+    transition: 0.3s;
 }
-
 
 .boton:hover {
     color: #663022;
     text-decoration: underline;
-    transform: scale(1.05)
+    transform: scale(1.05);
+}
+
+/* Menú de navegación */
+nav {
+    border-top: 2px solid #D9B99B;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+nav a {
+    display: block;
+    background-color: #F5E6D3;
+    color: #A64B35;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
+    border: 2px solid #A64B35;
+    border-radius: 5px;
+    width: 180px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #663022;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Imágenes */
+img {
+    border: 3px solid #D9B99B;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.imagen-principal {
+    display: block;
+    width: 500px;
+    margin: 20px auto;
+}
+
+/* Miniatura del vídeo */
+.video img {
+    transition: 0.3s;
+}
+
+.video img:hover {
+    transform: scale(1.1);
+}
+
+/* Listas de ingredientes */
+li {
+    margin-bottom: 8px;
+}
+
+/* Tabla */
+table {
+    margin: 20px auto;
+    border: 1px solid #D9B99B;
+    border-radius: 10px;
+    color: #79513C;
+}
+
+th {
+    background-color: #79513C;
+    color: white;
+    padding: 8px 12px;
+}
+
+td {
+    background-color: #F5E6D3;
+    padding: 8px 12px;
+    border-top: 1px solid #D9B99B;
+}
+
+/* Separador y pie de página */
+.linea-separadora {
+    border-top: 2px solid #D9B99B;
+    margin: 30px 0;
 }
 
 footer {
@@ -76,57 +150,10 @@ footer {
     background-color: #F5E6D3;
     color: #79513C;
     text-decoration: none;
-    padding: 0px 10px;
+    padding: 0 10px;
     margin: 5px auto;
     text-align: center;
     border: 2px solid #D9B99B;
     border-radius: 5px;
     width: 180px;
-      
 }
-
-.linea-separadora{
-    border-top: 2px solid #D9B99B;
-    margin: 30px 0;
-
-}
-
-
-/* Detalles video insertado */
-.video img{
-    transition: 0.3s
-
-}
-
-.video img:hover{
-    transform: scale(1.1)
-
-}
-
-/* Detalles tabla */
-table {
-    margin: 20px auto;
-    border: 1px solid #D9B99B;
-    border-radius: 10px;
-    color: #79513C;
-    
-
-}
-
-th {
-    background-color: #79513C;
-    color: white;
-    padding: 8px 12px;
-
-}
-
-td {
-    background-color: #F5E6D3;
-    padding: 8px 12px;
-    border-top: 1px solid #D9B99B;
-
-}
-
-
-
-

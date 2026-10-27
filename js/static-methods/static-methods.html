@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos estáticos</title>
+    <script>
+        class Calc{
+            static sum(a,b){
+                return a+b;
+            }
+            substract(a,b){
+                return a-b;
+            }
+            static multiply(a,b){
+                return a*b;
+            }
+            divide(a,b){
+                return a/b;
+            }
+            module(a,b){
+                return a%b;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav><a href="../index.html">← Volver atrás</a></nav>
+    <script>
+        let calculator = new Calc();
+        console.log(Calc.sum(5,7))
+        let calc = new Calc();
+        console.log(calculator.substract(5,7))
+    </script>
+</body>
+</html>

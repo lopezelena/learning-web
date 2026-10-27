@@ -3,7 +3,10 @@ body {
     background-color: #FFF8EF;
     color: #3D3028;
     font-family: 'Nunito', sans-serif;
-    margin: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+    line-height: 1.7;
+    padding: 0 20px;
 }
 
 /* Títulos */
@@ -117,6 +120,14 @@ img {
 /* Listas de ingredientes */
 li {
     margin-bottom: 8px;
+   
+}
+
+ul, ol {
+    padding: 18px 25px 18px 45px;
+    background-color: #FFFCF7;
+    border-left: 4px solid #D9B99B;
+    border-radius: 0 8px 8px 0;
 }
 
 /* Tabla */

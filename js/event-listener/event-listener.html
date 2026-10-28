@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuchador de eventos</title>
+    <script>
+        function addEventHandler(){
+            console.log("Test");
+            let buttons = document.getElementsByClassName("enableBtn");
+            console.log(buttons);
+            
+
+
+        }
+    </script>
+</head>
+<body>
+    <nav><a href="../index.html">← Volver atrás</a><div>Pulsar F12 para abrir las herramientas de desarrollo</div></nav>
+    <button id="addFunc" onclick="addEventHandler()">Añadir funcionamiento</button>
+    <button class="enableBtn">Funcionará...1</button>
+    <button class="enableBtn">Funcionará...2</button>
+</body>
+</html>

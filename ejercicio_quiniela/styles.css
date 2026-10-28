@@ -394,7 +394,7 @@ body {
 }
 
 /* Se limita al ancho de la tabla principal,
-   no invade la columna de combinaciones. */
+   para no invadir columna combinaciones. */
 .pie {
     width: 84%;
     height: 12%;

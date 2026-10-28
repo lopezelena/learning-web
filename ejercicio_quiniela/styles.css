@@ -276,9 +276,10 @@ body {
 /* COLUMNA DE COMBINACIONES */
 .combinaciones {
     position: relative;
-    width: 10%;
-    flex: 1;
+    width: 8%;
+    flex: 0 0 8%;
     min-width: 0;
+    max-width: 8%;
     height: 100%;
     border: 0;
     color: #d84e58;
@@ -326,9 +327,13 @@ body {
 }
 
 .comb-titulo {
-    border-bottom: 1px solid #e45b65;
-    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
     padding: 5px 0;
+    border-bottom: 1px solid #e45b65;
+    white-space: normal;
+    line-height: 1.1;
 }
 
 .comb-columnas {

@@ -280,10 +280,49 @@ body {
     flex: 1;
     min-width: 0;
     height: 100%;
-    border: 2px solid #e45b65;
+    border: 0;
     color: #d84e58;
     text-align: center;
     background: white;
+}
+
+/* Marco escalonado: la columna de triples termina antes que la de dobles. */
+.combinaciones::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-top: 2px solid #e45b65;
+    border-left: 2px solid #e45b65;
+    pointer-events: none;
+}
+.combinaciones::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 72%;
+    border-top: 2px solid #e45b65;
+    border-right: 2px solid #e45b65;
+    border-bottom: 2px solid #e45b65;
+    pointer-events: none;
+}
+
+.marco-comb-bajada {
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    bottom: 0;
+    border-left: 2px solid #e45b65;
+    pointer-events: none;
+}
+.marco-comb-base {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    border-bottom: 2px solid #e45b65;
+    pointer-events: none;
 }
 
 .comb-titulo {
@@ -473,5 +512,4 @@ body {
     min-width: 0;
     flex: 1 1 0;
 }
-
 

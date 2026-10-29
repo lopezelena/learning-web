@@ -6,29 +6,27 @@
     <title>Modificaciones del árbol DOM</title>
     <script>
         function addTask(){
-            let input= document.getElementById("inputBox");
-            console.log(input.value);
-            let li = document.createElement("li");
-            li.innerHTML = input.value
-            document.getElementById("task").appendChild(li)
-            input.value="";
+            let input= document.getElementById("inputBox"); /*Crea una variable "input" donde guardas lo que se escriba en la inputbox*/
+            console.log(input.value); /*Muestra en consola lo que se escribe en la caja*/
+            let li = document.createElement("li"); /* Crea un nuevo li */
+            li.innerHTML = input.value /* El texto dentro del li = texto de la input box*/
+            document.getElementById("task").appendChild(li) /* Busca el id=task que es <ul> y pega el li (con .appendChild()) */
+            input.value=""; /*Deja la caja de texto vacía*/
 
         }
 
-        function deleteMe(e){
+        function deleteMe(e){ /* this y e pasan a ser lo mismo al estar dentro de deleteMe()*/
             console.log(e.parentNode);
-            e.parentNode.remove();
+            e.parentNode.remove(); /*“borra la habitación donde está el botón” que es <body> en este caso, el padre de <button>*/
             
         }
     </script>
 </head>
 <body>
     <nav><a href="../index.html">← Volver atrás</a><div>Pulsar F12 para abrir las herramientas de desarrollo</div></nav>
-    <input name="task" type="text" id="inputBox">
-    <button onclick="addTask()">Añadir tarea</button>
-    <ul id="task">
-
-    </ul>
-    <button id="deleteBtn" onclick="deleteMe(this)">Desaparece</button>
+    <input name="task" type="text" id="inputBox"> /*Creamos el recuadro para meter el input*/
+    <button onclick="addTask()">Añadir tarea</button> /*Creamos el botón añadir tarea*/
+    <ul id="task"></ul> /* Creamos una lista todavía sin datos dentro (li) */
+    <button id="deleteBtn" onclick="deleteMe(this)">Desaparece</button> /*Creamos el botón para borrar*/
 </body>
 </html>

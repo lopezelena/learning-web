@@ -5,7 +5,9 @@
     --border:#e2e8f0;
     --border-soft:#edf2f7;
 
-    --soft-violet: #ead6f4
+    --soft-violet: #cb9ae4;
+    --dark-violet: #ab5cd3;
+    --white: #ffffff;
 }
 
 /*Reset estilos*/
@@ -17,6 +19,7 @@
 
 /*Fondo web*/
 body{
+    font-family: "inter", sans-serif;
     background-color: var(--fondo-web);
     display: flex;
     justify-content: center;
@@ -63,11 +66,29 @@ header{
     outline: none;
 }
 
-.input-container .btn-submit{
+.btn-submit{
     border-radius: 8px;
     padding: 6px;
+    border:none;
     background-color: var(--soft-violet);
     cursor: pointer;
+    color: var(--white);
+    font-size:0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover{
+
+    background-color: var(--dark-violet);
+ 
+}
+
+.btn-submit:active{
+    transform: scale(0.9);
 }
 
 /*Tareas*/

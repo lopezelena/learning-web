@@ -1,0 +1,90 @@
+:root{
+    --fondo-web: #f4f6f8;
+    --fondo-tarjeta: #ffffff;
+
+    --border:#e2e8f0;
+    --border-soft:#edf2f7;
+
+    --soft-violet: #ead6f4
+}
+
+/*Reset estilos*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Fondo web*/
+body{
+    background-color: var(--fondo-web);
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    padding: 60px 20px;
+
+}
+
+/*Tarjeta contenedora*/
+
+.container{
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--fondo-tarjeta);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    padding: 32px 24px;
+}
+
+/*Cabecera*/
+header{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+/*Añadir tarea*/
+.input-container{
+    display:flex;
+    align-items: center;
+    background-color: var(--fondo-tarjeta);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 6px 6px 6px 14px;
+    margin-bottom: 24px;
+}
+
+.input-container input{
+    flex: 1;
+    border:none;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container .btn-submit{
+    border-radius: 8px;
+    padding: 6px;
+    background-color: var(--soft-violet);
+    cursor: pointer;
+}
+
+/*Tareas*/
+.task-list{
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fondo-tarjeta);
+    border:1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 12px 14px;
+
+}

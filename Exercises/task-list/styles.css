@@ -1,13 +1,20 @@
 :root{
-    --fondo-web: #f4f6f8;
+    --web-background: #f4f6f8;
     --fondo-tarjeta: #ffffff;
 
     --border:#e2e8f0;
     --border-soft:#edf2f7;
 
-    --soft-violet: #cb9ae4;
-    --dark-violet: #ab5cd3;
+    --text: #2d3748;
+    --text-soft: #94a3b8;
+
+    --violet-soft: #cb9ae4;
+    --violet-dark: #ab5cd3;
     --white: #ffffff;
+    --green: #5cba00;
+    --red: #ef4444;
+    --red-soft: #fd9090;
+    --blue: #3b82f6;
 }
 
 /*Reset estilos*/
@@ -20,7 +27,7 @@
 /*Fondo web*/
 body{
     font-family: "inter", sans-serif;
-    background-color: var(--fondo-web);
+    background-color: var(--web-background);
     display: flex;
     justify-content: center;
     align-items: flex;
@@ -48,6 +55,10 @@ header{
     margin-bottom: 24px;
 }
 
+header span{
+    color: var(--blue)
+}
+
 /*Añadir tarea*/
 .input-container{
     display:flex;
@@ -70,7 +81,7 @@ header{
     border-radius: 8px;
     padding: 6px;
     border:none;
-    background-color: var(--soft-violet);
+    background-color: var(--violet-soft);
     cursor: pointer;
     color: var(--white);
     font-size:0.88rem;
@@ -83,7 +94,7 @@ header{
 
 .btn-submit:hover{
 
-    background-color: var(--dark-violet);
+    background-color: var(--violet-dark);
  
 }
 
@@ -108,4 +119,53 @@ header{
     border-radius: 10px;
     padding: 12px 14px;
 
+}
+
+.task-item.done{
+    color: var(--text-soft);
+}
+
+.task-item.done .task-name{
+    text-decoration: line-through;
+}
+
+.btn-check{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.btn-check:hover{
+    border-color: var(--violet-soft);
+}
+
+.task-item.done .btn-check{
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+
+}
+
+.btn-delete{
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: var(--text);
+    padding: 4px;
+    display: flex;
+    opacity: 0.5;
+    transition: opacity 0.2s,background-color 0.2, color 0.2s;
+
+}
+
+.btn-delete:hover{
+    color: var(--red);
+    background-color: var(--red-soft);
+    opacity: 1;
 }

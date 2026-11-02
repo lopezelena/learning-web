@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+    <body>
     <div class="container">
         <header>
-            <span>📎</span>
+            <span class="material-symbols-outlined">
+            checklist
+            </span>
             <h1>Mi lista de tareas</h1>
         </header>
         <div class="input-container">
@@ -26,10 +30,24 @@
         <ul id="task-list" class="task-list">
             <li class="task-item">
                 <div class="task-container">
-                    <button class="btn-check"> ✓ </button>
+                    <button class="btn-check">✓</button>
                     <span class="task-name">Tarea pendiente</span>
-                    </div>
-                    <button class="btn-delete">🪣</button>
+                </div>
+
+                <button class="btn-delete">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
+            </li>
+
+            <li class="task-item done">
+                <div class="task-container">
+                    <button class="btn-check">✓</button>
+                    <span class="task-name">Tarea completada</span>
+                </div>
+
+                <button class="btn-delete">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
             </li>
         </ul>
     </div>
